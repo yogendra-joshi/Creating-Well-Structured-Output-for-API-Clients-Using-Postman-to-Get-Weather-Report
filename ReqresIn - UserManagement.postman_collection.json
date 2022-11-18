@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "f43c0e6c-52ee-4d3c-9968-038674962eaa",
+		"name": "ReqresIn - UserManagement",
+		"description": "Reqresin webapi is used for api management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUsersList - page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page={{page}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{page}}"
+						}
+					]
+				},
+				"description": "Get request to reqres URL and get all users list and validate the response"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser - post  user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"gmorpheus\",\"job\":\"gleader\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Post request to reqres URL and validate the response"
+			},
+			"response": []
+		}
+	]
+}

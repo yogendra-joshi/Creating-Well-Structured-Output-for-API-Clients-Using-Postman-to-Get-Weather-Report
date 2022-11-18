@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "757dedfa-7e4e-4ff5-8ff4-e17508dce39d",
+		"name": "OpenWeatherMap - CurrentWeatherData",
+		"description": "CurrentWeatherData - Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CurrentWeatherByCityName - City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q={{city name}}&appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{city name}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API key}}"
+						}
+					]
+				},
+				"description": "You can call by city name or city name, state code and country code. Please note that searching by states available only for the USA locations"
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByCityName - City,State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q={{city name}},{{state code}}&appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{city name}},{{state code}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API key}}"
+						}
+					]
+				},
+				"description": "You can call by city name or city name, state code and country code. Please note that searching by states available only for the USA locations."
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByCityName - City,State,Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q={{city name}},{{state code}},{{country code}}&appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{city name}},{{state code}},{{country code}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByCityId - ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id={{city id}}&appid=5f970784a48d8c8e90af04858aa37944",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{city id}}"
+						},
+						{
+							"key": "appid",
+							"value": "5f970784a48d8c8e90af04858aa37944"
+						}
+					]
+				},
+				"description": "We recommend to call API by city ID to get unambiguous result for your city.By city name - You can call by city name or city name, state code and country code.\r\n                Please note that searching by states available only for the USA locations."
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByGeoCoordinates - LatitudeLongitude",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "{{lat}}"
+						},
+						{
+							"key": "lon",
+							"value": "{{lon}}appid={{API key}}"
+						}
+					]
+				},
+				"description": "latitude and longitude "
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByZipcode- Zipcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip={{zip code}},{{country code}}&appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "{{zip code}},{{country code}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API key}}"
+						}
+					]
+				},
+				"description": "Please note if country is not specified then the search works for USA as a default."
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByCityRectangleZone - Cities within a rectangle zone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/box/city?bbox={{bbox}}&appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "{{bbox}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API key}}"
+						}
+					]
+				},
+				"description": "API returns the data from cities within the defined rectangle specified by the geographic coordinates."
+			},
+			"response": []
+		},
+		{
+			"name": "CurrentWeatherByCityCircle - Cities in circle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/find?lat={{latc}}&lon={{lonc}}&cnt={{cnt}}&appid={{API key}}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "{{latc}}"
+						},
+						{
+							"key": "lon",
+							"value": "{{lonc}}"
+						},
+						{
+							"key": "cnt",
+							"value": "{{cnt}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{API key}}"
+						}
+					]
+				},
+				"description": "API returns data from cities laid within definite circle that is specified by center point (lat, lon)\r\n                      and expected number of cities (cnt) around this point."
+			},
+			"response": []
+		}
+	]
+}
